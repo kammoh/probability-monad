@@ -9,25 +9,16 @@ name := "probability-monad",
 
 scalaVersion := crossScalaVersions.value.last,
 
-crossScalaVersions := Seq("2.12.15", "2.13.8"),
+crossScalaVersions := Seq("2.13.11"),
 
 scalacOptions ++= Seq("-Xfatal-warnings", "-deprecation"),
 
-libraryDependencies ++= {
-  CrossVersion.partialVersion(scalaVersion.value) match {
-    case Some((2, major)) if major <= 12 =>
-      Seq()
-    case _ =>
-      Seq("org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.3")
-  }
-},
-
 libraryDependencies ++= Seq(
-  "org.scala-lang.modules" %%% "scala-collection-compat" % "2.5.0",
-  "org.scalatest"          %%% "scalatest"               % "3.2.11" % Test,
-  "org.scalactic"          %%% "scalactic"               % "3.2.11" % Test,
+  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
+  "org.scala-lang.modules" %% "scala-collection-compat"    % "2.11.0",
+  "org.scalatest"          %% "scalatest"                  % "3.2.16" % Test,
+  "org.scalactic"          %% "scalactic"                  % "3.2.16" % Test,
 ),
-
 
 
 version := "1.0.4",

@@ -519,7 +519,7 @@ object Examples {
       "smoker=%-5s tar=%-5s cancer=%-5s".format(smoker, tar, cancer)
     }
   }
-  implicit val SmokingTrialOrdering = Ordering.by((t: SmokingTrial) => (t.smoker, t.tar, t.cancer))
+  implicit val SmokingTrialOrdering: Ordering[_] = Ordering.by((t: SmokingTrial) => (t.smoker, t.tar, t.cancer))
 
   /**
    * This encodes the probability distribution of smoking and cancer.
