@@ -15,7 +15,6 @@ scalacOptions ++= Seq("-Xfatal-warnings", "-deprecation"),
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
-  "org.scala-lang.modules" %% "scala-collection-compat"    % "2.11.0",
   "org.scalatest"          %% "scalatest"                  % "3.2.16" % Test,
   "org.scalactic"          %% "scalactic"                  % "3.2.16" % Test,
 ),
