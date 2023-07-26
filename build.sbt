@@ -1,5 +1,5 @@
 lazy val probabilityMonad = (
-  crossProject(JSPlatform, JVMPlatform, NativePlatform)
+  crossProject(JVMPlatform)
     .crossType(CrossType.Pure)
     .in(file("."))
   )
@@ -14,13 +14,13 @@ crossScalaVersions := Seq("2.13.11"),
 scalacOptions ++= Seq("-Xfatal-warnings", "-deprecation"),
 
 libraryDependencies ++= Seq(
-  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
-  "org.scalatest"          %% "scalatest"                  % "3.2.16" % Test,
-  "org.scalactic"          %% "scalactic"                  % "3.2.16" % Test,
+  "org.scala-lang.modules" %%% "scala-parallel-collections" % "1.0.4",
+  "org.scalatest"          %%% "scalatest"                  % "3.2.16" % Test,
+  "org.scalactic"          %%% "scalactic"                  % "3.2.16" % Test,
 ),
 
 
-version := "1.0.4",
+version := "1.0.5",
 
 organization := "org.jliszka",
 
